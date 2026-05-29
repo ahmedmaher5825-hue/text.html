@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CALC — Precision Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ebrahim.css" />
+</head>
+<body>
+
+  <!-- Ambient background orbs -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <main class="wrapper">
+
+    <!-- Calculator Card -->
+    <div class="calculator" role="application" aria-label="Calculator">
+
+      <!-- Header label -->
+      <div class="calc-header">
+        <span class="calc-logo">CALC</span>
+        <span class="calc-mode">DARK MODE</span>
+      </div>
+
+      <!-- Display screen -->
+      <div class="display" aria-live="polite" aria-label="Calculator display">
+        <!-- Expression / history row -->
+        <div class="display-expression" id="expression" aria-label="Current expression"></div>
+        <!-- Main result row -->
+        <div class="display-result" id="result" aria-label="Result">0</div>
+      </div>
+
+      <!-- Keyboard hint strip -->
+      <div class="keyboard-hint">⌨ keyboard supported</div>
+
+      <!-- Button grid -->
+      <div class="btn-grid">
+
+        <!-- Row 1 -->
+        <button class="btn btn-fn btn-wide"  data-action="clear"    aria-label="Clear">C</button>
+        <button class="btn btn-fn"           data-action="sign"     aria-label="Toggle sign">+/−</button>
+        <button class="btn btn-fn"           data-action="percent"  aria-label="Percent">%</button>
+        <button class="btn btn-op"           data-action="operator" data-value="÷" aria-label="Divide">÷</button>
+
+        <!-- Row 2 -->
+        <button class="btn btn-num" data-action="digit" data-value="7" aria-label="7">7</button>
+        <button class="btn btn-num" data-action="digit" data-value="8" aria-label="8">8</button>
+        <button class="btn btn-num" data-action="digit" data-value="9" aria-label="9">9</button>
+        <button class="btn btn-op"  data-action="operator" data-value="×" aria-label="Multiply">×</button>
+
+        <!-- Row 3 -->
+        <button class="btn btn-num" data-action="digit" data-value="4" aria-label="4">4</button>
+        <button class="btn btn-num" data-action="digit" data-value="5" aria-label="5">5</button>
+        <button class="btn btn-num" data-action="digit" data-value="6" aria-label="6">6</button>
+        <button class="btn btn-op"  data-action="operator" data-value="−" aria-label="Subtract">−</button>
+
+        <!-- Row 4 -->
+        <button class="btn btn-num" data-action="digit" data-value="1" aria-label="1">1</button>
+        <button class="btn btn-num" data-action="digit" data-value="2" aria-label="2">2</button>
+        <button class="btn btn-num" data-action="digit" data-value="3" aria-label="3">3</button>
+        <button class="btn btn-op"  data-action="operator" data-value="+" aria-label="Add">+</button>
+
+        <!-- Row 5 -->
+        <button class="btn btn-num btn-wide" data-action="digit" data-value="0" aria-label="0">0</button>
+        <button class="btn btn-num"          data-action="decimal" aria-label="Decimal point">.</button>
+        <button class="btn btn-eq"           data-action="equals" aria-label="Equals">=</button>
+
+      </div><!-- /.btn-grid -->
+    </div><!-- /.calculator -->
+
+  </main>
+
+  <script src="ebrahim.js"></script>
+</body>
+</html>
