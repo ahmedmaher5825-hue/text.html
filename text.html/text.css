@@ -1,0 +1,111 @@
+:root{
+    --primary:#ff6b35;
+    --primary-dark:#d85a2c;
+    --bg-dark:#0f0f0f;
+    --bg-card:#1a1a1a;
+    --text:#ffffff;
+    --text-muted:#a0a0a0;
+    --accent:#00d4ff;
+    --radius:#16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg,var(--bg-dark) 0%,#1a1a2a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+#container{
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 320px;
+    padding: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7),inset 0 1px 0 rgba(255, 255, 255,0.1);
+    border: 1px soild rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+#display{
+    width: 260px;
+    height: 70px;
+    padding: 20px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    margin-bottom: 20px;
+    border-radius: 12px;
+    text-align: right;
+    outline: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255,0.1);
+    letter-spacing: 1px;
+    overflow: auto;
+
+}
+
+#display:focus{
+    border-color: var(--accent);
+    background: rgba(0, 212, 255, 0.08);
+}
+
+#key{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button:nth-child(16),button:nth-child(17){
+    background: linear-gradient(135deg, var(--primary)0%, var(--primary-dark)100%);
+    border: none;
+    color: white;
+    grid-column: span 2;
+}
+
+button:nth-child(16):hover,button:nth-child(17):hover{
+    box-shadow: 0 12px 30px rgba(255, 107, 53,0.4);
+    transform: translateY(-3px);
+
+}
+
+button:nth-child(1),button:nth-child(5),button:nth-child(9),button:nth-child(13){
+    color: var(--accent);
+}
+
+button{
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text);
+    background: rgba(255, 107, 53,0.2);
+    border: rgba(255, 107, 53,0.3);
+}
+
+button:hover{
+    background: rgba(255, 107, 53,0.35);
+    border-color: rgba(255, 107, 53,0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53,0.2);
+}
+
+button:active{
+    transform: translateY(0);
+}
+
